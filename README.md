@@ -1,2 +1,2 @@
-# Portfolio
-Creating a Portfolio Site using NextJs🖤
+# Mezelf
+Creating a Portfolio Template using NextJs🖤
