@@ -22,7 +22,13 @@ const GlobalStyle = createGlobalStyle`
         color:var(--textGrey);
         font-family:  'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
-
+    a{
+        text-decoration:none
+    }
+    button{
+        outline:none;
+        border:none;
+    }
 `
 
 export default GlobalStyle
