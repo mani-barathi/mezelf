@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
 import styled from 'styled-components'
-import GlobalStyle from '../styles/GlobalStyles'
+import GlobalStyle from '@/styles/GlobalStyles'
 
 function MyApp({ Component, pageProps }) {
   return (
