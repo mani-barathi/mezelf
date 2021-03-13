@@ -1,32 +1,22 @@
 import { useEffect, useState } from "react"
 import styled from "styled-components"
 import Link from "next/link"
-import { useRouter } from "next/router";
+import { useRouter } from "next/router"
+import useScroll from "@/hooks/useScroll"
 
 export default function Navbar() {
     const [currentPage, setCurrentPage] = useState('/')
-    const [showBorder, setShowBorder] = useState(false)
+    const { isScrolled } = useScroll()
     const router = useRouter()
 
     useEffect(() => {
         setCurrentPage(router.pathname)
     }, [router.pathname])
 
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 40) setShowBorder(true)
-            else setShowBorder(false)
-        }
-
-        window.addEventListener("scroll", handleScroll)
-
-        return () => window.removeEventListener("scroll", handleScroll)
-    }, [])
-
     const checkIsActive = (path) => (path === currentPage) ? true : false
 
     return (
-        <Wrapper showBorder={showBorder}>
+        <Wrapper isScrolled={isScrolled}>
             <Link href="/">
                 <NavLink active={checkIsActive('/')} >Home</NavLink>
             </Link>
@@ -48,10 +38,10 @@ const Wrapper = styled.div`
     position:sticky;
     top:0;
     z-index:5;
-    background-color:var(--darkBg);
     transition: all 0.3s ease;
-    border-bottom:1px solid ${prop => prop.showBorder ? '#616161' : 'transparent'};
-    box-shadow: ${prop => prop.showBorder ? ' 0px 3px 5px 0px rgba(50, 50, 50, 0.33)' : 'none'};
+    background-color:${prop => prop.isScrolled ? 'var(--navBarBg)' : 'var(--darkBg)'} ;
+    border-bottom:1px solid ${prop => prop.isScrolled ? '#616161' : 'transparent'};
+    box-shadow: ${prop => prop.isScrolled ? '0 8px 6px -6px rgba(0, 0, 0, 0.233)' : 'none'};
 `
 const NavLink = styled.a`
     margin:0.5rem 0.8rem;
