@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     }
     :root {
         --darkBg: #222222;
+        --navBarBg: #202020;
         --textWhite: #f6f6f6;
         --textGrey: #DDDDDD;
         --textPink: #ff005c;
@@ -23,11 +24,13 @@ const GlobalStyle = createGlobalStyle`
         font-family:  'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
     a{
-        text-decoration:none
+        text-decoration:none;
+        font-family:  'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
     button{
         outline:none;
         border:none;
+        font-family:  'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
 `
 
