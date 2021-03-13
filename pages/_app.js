@@ -36,6 +36,7 @@ const Container = styled.div`
   width:100%;
   max-width:1300px;
   flex:1;
+  min-height:110vh;
   display:flex;
   flex-direction:column;
 `
