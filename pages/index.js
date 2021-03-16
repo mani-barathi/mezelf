@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react'
 import styled, { keyframes, css } from 'styled-components'
+import Button from "@/styles/Button"
+import AboutModal from "@/components/AboutModal"
 
 export default function Home() {
   const [isAnimated, setIsAnimated] = useState(false)
+  const [open, setOpen] = useState(false)
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -11,14 +14,22 @@ export default function Home() {
     return () => clearTimeout(timer)
   }, [])
 
+  const openModal = () => setOpen(true)
+
   return (
     <Wrapper>
       <Contianer>
         <Text animation={slideDownAnimation} large>Hi!</Text>
         <Text animation={fadeInAnimation} large textPink inline>I'm </Text>
         <Text animation={fadeInAnimation} large textBlue inline>Manibarathi.</Text>
-        <Paragraph isAnimated={isAnimated} >Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ducimus placeat ratione accusamus perferendis quam dolore voluptates aperiam, eaque fuga.</Paragraph>
+        <Paragraph isAnimated={isAnimated} >Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ducimus placeat ratione accusamus perferendis quam dolore voluptates aperiam, eaque fuga.
+          <ButtonContiner>
+            <Button onClick={openModal} textBlue>ABOUT ME</Button>
+          </ButtonContiner>
+        </Paragraph>
       </Contianer>
+
+      <AboutModal open={open} setOpen={setOpen} />
     </Wrapper>
   )
 }
@@ -53,9 +64,12 @@ const Text = styled.h3`
     font-size:${props => props.medium ? '1.3rem' : props.large ? '2.4rem' : '1rem'};
   }
 `
-const Paragraph = styled.p`
+const Paragraph = styled.div`
   transition: all 0.8s ease;
   opacity: ${props => props.isAnimated ? '1' : '0'};
   transform: ${props => props.isAnimated ? 'translatey(0)' : 'translatey(10px)'};
   max-width:600px;
+`
+const ButtonContiner = styled.div`
+  margin:1rem 0;
 `
