@@ -6,6 +6,6 @@ Creating a Portfolio Template using NextJs🖤
 **Contributions are Welcomed💙**
 
 ### Currently Working 👇
-- [ ] Navbar
-- [x] ~Intro sectio~
+- [x] ~Intro sectio animation~
+- [x] ~Navbar~
 - [x] ~Setting Up Nextjs and Styled Components~
