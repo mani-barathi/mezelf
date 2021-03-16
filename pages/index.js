@@ -26,7 +26,6 @@ export default function Home() {
 const Wrapper = styled.div`
   flex:1;
   display:flex;
-  justify-context:center;
   align-items:center;
 `
 const Contianer = styled.div`
