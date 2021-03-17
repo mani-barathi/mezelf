@@ -29,6 +29,22 @@ const FormInput = styled.input`
     border-radius:3px;
     background-color:transparent;
     color:var(--textGrey);
+    width:100%;
+    resize:vertical;
+    scrollbar-width: thin;
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: var(--darkBg);
+      }
+      
+    &::-webkit-scrollbar {
+        width: 5px;
+        background-color: #6B6969;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: #6B6969;
+    }
 `
 
 export {

@@ -11,11 +11,15 @@ export default function contact() {
                     <Form autoComplete="off">
                         <FormGroup>
                             <label htmlFor="name">Name</label>
-                            <FormInput type="text" name="name" id="" required />
+                            <FormInput type="text" name="name" id="name" required />
                         </FormGroup>
                         <FormGroup>
                             <label htmlFor="email">Email</label>
-                            <FormInput type="text" name="email" id="" required />
+                            <FormInput type="text" name="email" id="email" required />
+                        </FormGroup>
+                        <FormGroup>
+                            <label htmlFor="email">Message</label>
+                            <FormInput as="textarea" rows="5" type="text" name="message" id="email" required />
                         </FormGroup>
                     </Form>
                 </div>
