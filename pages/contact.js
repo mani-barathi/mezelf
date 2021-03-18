@@ -1,18 +1,19 @@
 import { } from 'react'
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { Form, FormGroup, FormInput } from "@/styles/Form"
-import Button from "@/styles/Button"
+import { Text } from "@/styles/Typgraphy"
+import { Button } from "@/styles/Button"
 
 export default function contact() {
     return (
         <Wrapper>
             <Container>
                 <div>
-                    <h1>Let's Keep in Touch</h1>
+                    <Text large>Let's Keep in Touch</Text>
                     <br />
-                    <h3 style={{ fontWeight: '500' }}>
+                    <Text style={{ fontWeight: '600' }}>
                         If you wanna get in touch, talk to me about a project collaboration or just say hi, send me a message by filling up the form below.
-                    </h3>
+                    </Text>
                     <br />
                     <br />
                 </div>
@@ -32,7 +33,7 @@ export default function contact() {
                     </FormGroup> */}
                 </Form>
                 <div style={{ width: "100%", marginTop: "4rem" }} >
-                    <h2>Let's Get Social</h2>
+                    <Text medium>Let's Get Social</Text>
                     <br />
                     <Button>INSTAGRAM</Button> &nbsp;
                     <Button>GITHUB</Button>    &nbsp;

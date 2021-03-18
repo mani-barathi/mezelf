@@ -20,4 +20,6 @@ const Button = styled.button`
         transform: translatey(5px);
     }
 `
-export default Button
+export {
+    Button
+}
