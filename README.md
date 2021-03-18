@@ -10,6 +10,3 @@ Creating a Portfolio Template using NextJs🖤
 - [x] ~Contact Form Layout~
 - [x] ~About Modal~
 - [x] ~404 Page~
-- [x] ~Button~
-- [x] ~Intro sectio animation~
-- [x] ~Navbar~
