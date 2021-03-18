@@ -1,9 +1,7 @@
 import styled from "styled-components"
 
 const Form = styled.form`
-    padding:1rem 0;
     width:100%;
-    max-width:500px;
 `
 const FormGroup = styled.div`
     display:flex;
