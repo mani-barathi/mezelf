@@ -19,6 +19,10 @@ const Button = styled.button`
     &:active{
         transform: translatey(5px);
     }
+    &:disabled{
+        opacity:0.5;
+        cursor: no-drop;
+    }
 `
 export {
     Button
