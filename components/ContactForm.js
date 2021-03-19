@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react'
 import { Form, FormGroup, FormInput } from "@/styles/Form"
 import { Button } from "@/styles/Button"
+import { fadeInAnimation } from "@/styles/Animation"
 
 const KEYS = ['name', 'email', 'message']
 
@@ -27,21 +28,21 @@ export default function ContactForm() {
     return (
         <Form onSubmit={handleSubmit} autoComplete="off">
             {(currentField === 0) &&
-                <FormGroup>
+                <FormGroup animation={fadeInAnimation}>
                     <label htmlFor="name">Name</label>
                     <FormInput value={currentFieldValue} onChange={handleOnChange} type="text" name="name" id="name" required />
                 </FormGroup>
             }
             {(currentField === 1) &&
-                <FormGroup>
+                <FormGroup animation={fadeInAnimation}>
                     <label htmlFor="email">Email</label>
                     <FormInput value={currentFieldValue} onChange={handleOnChange} type="email" name="email" id="email" required autoFocus />
                 </FormGroup>
             }
             {(currentField === 2) &&
-                <FormGroup>
+                <FormGroup animation={fadeInAnimation}>
                     <label htmlFor="email">Message</label>
-                    <FormInput value={currentFieldValue} onChange={handleOnChange} as="textarea" rows="5" type="text" name="message" id="email" required autoFocus />
+                    <FormInput value={currentFieldValue} onChange={handleOnChange} as="textarea" rows="4" type="text" name="message" id="email" required autoFocus />
                 </FormGroup>
             }
             <Button textBlue>NEXT</Button>

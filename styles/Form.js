@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 const Form = styled.form`
     width:100%;
@@ -11,6 +11,7 @@ const FormGroup = styled.div`
     border-radius:4px;
     background-color:#353535;
     transition:all 0.2s ease;
+    animation: ${props => props.animation ? css`ease-in 0.3s ${props.animation}` : 'none'} ;
     &:focus-within{
         border-bottom:2px solid #6B6969;
     }
