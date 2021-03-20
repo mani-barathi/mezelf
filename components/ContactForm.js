@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import styled from "styled-components"
 import { Form, FormGroup, FormInput } from "@/styles/Form"
 import { Button } from "@/styles/Button"
 import { fadeInAnimation } from "@/styles/Animation"
@@ -8,6 +9,15 @@ export default function ContactForm() {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
+    const [sent, setSent] = useState(null)
+
+    useEffect(() => {
+        if (!sent) return
+        let timer = setTimeout(() => {
+            setSent(null)
+        }, 30000)
+        return () => clearTimeout(timer)
+    }, [sent])
 
     const goToPreviousField = () => {
         setCurrentField(prev => prev - 1)
@@ -19,18 +29,25 @@ export default function ContactForm() {
         if (currentField <= 1)
             setCurrentField(prev => prev + 1)
         else {
-            // Saving Form Response Goes Here.......
             const data = { name, email, message }
             console.log("data: ", data)
+            // Saving Form Response Goes Here.......
             setName('')
             setEmail('')
             setMessage('')
             setCurrentField(0)
+            setSent({ success: true })
         }
     }
 
     return (
         <Form onSubmit={handleSubmit} autoComplete="off">
+            { sent &&
+                <Message animation={fadeInAnimation} success={sent.success}>
+                    {sent.success ? 'Thanks, your message is received.' : 'Sorry, unable to send Message... Try again later'}
+                </Message>
+            }
+
             {(currentField === 0) &&
                 <FormGroup animation={fadeInAnimation}>
                     <label htmlFor="name">Name</label>
@@ -55,3 +72,9 @@ export default function ContactForm() {
         </Form>
     )
 }
+
+const Message = styled(FormGroup)`
+    padding: 0.7rem 0.5rem;
+    background-color:${props => props.success ? '#229954' : '#E74C3C'};
+    border:none;
+`
