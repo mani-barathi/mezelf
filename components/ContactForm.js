@@ -15,7 +15,7 @@ export default function ContactForm() {
         if (!sent) return
         let timer = setTimeout(() => {
             setSent(null)
-        }, 30000)
+        }, 5000)
         return () => clearTimeout(timer)
     }, [sent])
 
