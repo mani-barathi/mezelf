@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import AboutModal from "@/components/AboutModal"
 import { Button } from "@/styles/Button"
-import { Text, Paragraph } from "@/styles/Typgraphy"
+import { Text, Paragraph } from "@/styles/Typography"
 import { slideDownAnimation, fadeInAnimation } from "@/styles/Animation"
 
 export default function Home() {

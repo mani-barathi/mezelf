@@ -1,6 +1,6 @@
 import { } from 'react'
 import styled from "styled-components"
-import { Text } from "@/styles/Typgraphy"
+import { Text } from "@/styles/Typography"
 import { Button } from "@/styles/Button"
 import ContactForm from "@/components/ContactForm"
 

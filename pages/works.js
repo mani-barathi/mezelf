@@ -1,6 +1,6 @@
 import { } from 'react'
 import styled from "styled-components"
-import { Text } from "@/styles/Typgraphy";
+import { Text } from "@/styles/Typography";
 
 export default function works() {
     return (

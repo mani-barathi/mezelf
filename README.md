@@ -6,7 +6,6 @@ Creating a Portfolio Template using NextJs🖤
 **Contributions are Welcomed💙**
 
 ### Currently Working On👇
-- [ ] Contact Form Styling
-- [x] ~Contact Form Layout~
-- [x] ~About Modal~
-- [x] ~404 Page~
+- [ ] Works Page Layout
+- [x] ~Contact Form Styling~
+- [x] ~Contact Page Layout~
