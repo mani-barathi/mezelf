@@ -54,6 +54,7 @@ const Wrapper = styled.div`
     width:100%;
     max-width:500px;
     color: var(--darkBg);
+    cursor:default;
     display:flex;
     flex-direction:column;
     justify-content:center;

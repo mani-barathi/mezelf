@@ -7,6 +7,7 @@ const Button = styled.button`
     border-radius:3px;
     font-size:0.95rem;
     font-weight:600;
+    user-select:none;
     border: 2px solid var(--${prop => prop.textPink ? 'textPink' : prop.textBlue ? 'textBlue' : 'textGrey'});
     background-color:transparent;
     color:var(--${prop => prop.textPink ? 'textPink' : prop.textBlue ? 'textBlue' : 'textGrey'});

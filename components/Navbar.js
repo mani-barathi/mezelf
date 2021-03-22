@@ -38,6 +38,7 @@ const Wrapper = styled.div`
     position:sticky;
     top:0;
     z-index:5;
+    user-select:none;
     transition: all 0.3s ease;
     background-color:${prop => prop.isScrolled ? 'var(--navBarBg)' : 'var(--darkBg)'} ;
     border-bottom:1px solid ${prop => prop.isScrolled ? '#616161' : 'transparent'};
