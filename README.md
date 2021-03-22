@@ -6,6 +6,7 @@ Creating a Portfolio Template using NextJs🖤
 **Contributions are Welcomed💙**
 
 ### Currently Working On👇
-- [ ] Works Page Layout
+- [x] ~Tech Badges in works page~
+- [x] ~Works Page Layout~
 - [x] ~Contact Form Styling~
 - [x] ~Contact Page Layout~
