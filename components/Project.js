@@ -53,7 +53,7 @@ const Image = styled.img`
     object-fit:cover;
 `
 const Title = styled.small`
-    background-color:#B3B6B7;
+    background-color:var(--lightBg);
     display:block;
     padding:0.1rem 0;
     text-align:center;

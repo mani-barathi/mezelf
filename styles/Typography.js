@@ -20,8 +20,14 @@ const Paragraph = styled.div`
     transform: ${props => props.isAnimated ? 'translatey(0)' : 'translatey(10px)'};
     max-width:600px;
 `
+const SmallText = styled.small`
+    color:var(--lightBg);
+    font-weight: ${props => props.bold ? '600' : '500'};
+    cursor:default;
+`
 
 export {
     Text,
-    Paragraph
+    Paragraph,
+    SmallText,
 }

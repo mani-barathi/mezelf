@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
     :root {
         --darkBg: #222222;
         --mediumDarkBg: #424949;
+        --lightBg: #B3B6B7;
         --navBarBg: #202020;
         --textWhite: #f6f6f6;
         --textGrey: #DDDDDD;

@@ -1,6 +1,6 @@
 import { } from 'react'
 import styled from "styled-components"
-import { Text } from "@/styles/Typography";
+import { Text, SmallText } from "@/styles/Typography";
 
 import TechBadge from "@/components/TechBadge"
 import Project from "@/components/Project"
@@ -43,6 +43,8 @@ export default function works() {
                         <TechBadge key={tech} name={tech} />
                     )}
                 </BadgeContainer>
+
+                <SmallText bold>Click on the Projects to Know More About it.</SmallText>
 
                 <ProjectsGrid>
                     {PROJECTS.map(project => <Project key={project.name} data={project} />)}
