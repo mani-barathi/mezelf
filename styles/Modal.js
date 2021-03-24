@@ -24,8 +24,6 @@ const Wrapper = styled.div`
     cursor:default;
     display:flex;
     flex-direction:column;
-    justify-content:center;
-    align-items:center;
     box-shadow: 0px 5px 16px 0px rgba(50, 50, 50, 0.73);
     opacity:${props => props.slideIn ? '1' : '0'};
     transform:${props => props.slideIn ? 'translatey(0)' : 'translatey(-30vh)'};

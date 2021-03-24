@@ -26,8 +26,10 @@ export default function AboutModal({ open, setOpen }) {
     return (
         <Overlay ref={wrapperRef} onClick={closeModal}>
             <Wrapper slideIn={slideIn}>
-                <h1>About Me</h1>
-                <Avatar src="https://cdn0.iconfinder.com/data/icons/avatar-78/128/12-512.png" alt="" />
+                <center>
+                    <h1>About Me</h1>
+                    <Avatar src="https://cdn0.iconfinder.com/data/icons/avatar-78/128/12-512.png" alt="" />
+                </center>
                 <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos repellat eaque nemo incidunt tempora! Beatae deleniti impedit perspiciatis assumenda quidem aliquid praesentium sed quam ullam repellat obcaecati optio sunt quaerat, quod esse perferendis, rem suscipit? Ex soluta dignissimos quas ratione.</div>
             </Wrapper>
         </Overlay>
