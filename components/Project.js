@@ -2,9 +2,11 @@ import styled from "styled-components"
 import TechBadge from "@/components/TechBadge"
 import { fadeInAnimation } from "@/styles/Animation"
 
-export default function Project({ data }) {
+export default function Project({ data, setCurrentProject }) {
+    const openProject = () => setCurrentProject(data)
+
     return (
-        <Container>
+        <Container onClick={openProject}>
             <Cover>
                 <div>
                     {data.technologies.map(tech => <TechBadge key={tech} name={tech} />)}

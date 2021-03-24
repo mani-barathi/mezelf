@@ -1,9 +1,10 @@
-import { } from 'react'
+import { useState } from 'react'
 import styled from "styled-components"
-import { Text, SmallText } from "@/styles/Typography";
-
 import TechBadge from "@/components/TechBadge"
 import Project from "@/components/Project"
+import AboutModal from "@/components/AboutModal"
+import { Text, SmallText } from "@/styles/Typography";
+
 
 const TECHNOLOGIES = ['HTML', 'CSS', 'javascript', 'react', 'nodejs', 'express', 'python', 'django', 'flask', 'firebase']
 
@@ -31,6 +32,8 @@ const PROJECTS = [{
 ]
 
 export default function works() {
+    const [currentProject, setCurrentProject] = useState(null)
+
     return (
         <Wrapper>
             <Container>
@@ -47,10 +50,15 @@ export default function works() {
                 <SmallText bold>Click on the Projects to Know More About it.</SmallText>
 
                 <ProjectsGrid>
-                    {PROJECTS.map(project => <Project key={project.name} data={project} />)}
+                    {PROJECTS.map(project =>
+                        <Project key={project.name} data={project} setCurrentProject={setCurrentProject} />
+                    )}
                 </ProjectsGrid>
 
             </Container>
+
+            <AboutModal open={currentProject} setOpen={setCurrentProject} />
+
         </Wrapper>
     )
 }
