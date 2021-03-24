@@ -41,13 +41,13 @@ export default function works() {
                 <br />
                 <p>From Frontend to Backend to Serverless. Check out my latest Projects.</p>
 
-                <BadgeContainer>
+                <FlexContainer>
                     {TECHNOLOGIES.map(tech =>
                         <TechBadge key={tech} name={tech} />
                     )}
-                </BadgeContainer>
+                </FlexContainer>
 
-                <SmallText bold>Click on the Projects to Know More About it.</SmallText>
+                <SmallText textMuted bold>Click on the Projects to Know More About it.</SmallText>
 
                 <ProjectsGrid>
                     {PROJECTS.map(project =>
@@ -75,7 +75,7 @@ const Container = styled.div`
     display:flex;
     flex-direction:column;
 `
-const BadgeContainer = styled.div`
+const FlexContainer = styled.div`
     margin:1rem 0;
     display:flex;
     flex-wrap:wrap;

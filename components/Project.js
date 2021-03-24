@@ -39,6 +39,7 @@ const Cover = styled.div`
     }
 `
 const Container = styled.div`
+    width:100%;
     max-width:600px;
     transition: all 0.2s ease;
     animation: ease-in 0.3s ${fadeInAnimation};

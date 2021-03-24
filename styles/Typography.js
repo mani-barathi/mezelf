@@ -21,7 +21,7 @@ const Paragraph = styled.div`
     max-width:600px;
 `
 const SmallText = styled.small`
-    color:var(--lightBg);
+    color:var(--${props => props.textMuted ? 'lightBg' : 'textGrey'});
     font-weight: ${props => props.bold ? '600' : '500'};
     cursor:default;
 `

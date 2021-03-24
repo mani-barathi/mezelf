@@ -5,7 +5,7 @@ import { Wrapper, Overlay } from "@/styles/Modal"
 import { Button } from "@/styles/Button"
 import TechBadge from './TechBadge'
 
-export default function AboutModal({ currentProject, setCurrentProject }) {
+export default function ProjectModal({ currentProject, setCurrentProject }) {
     const wrapperRef = useRef()
     const [slideIn, setSlideIn] = useState(false)
 
