@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styled from "styled-components"
 import TechBadge from "@/components/TechBadge"
 import Project from "@/components/Project"
-import AboutModal from "@/components/AboutModal"
+import ProjectModal from "@/components/ProjectModal"
 import { Text, SmallText } from "@/styles/Typography";
 
 
@@ -57,7 +57,7 @@ export default function works() {
 
             </Container>
 
-            <AboutModal open={currentProject} setOpen={setCurrentProject} />
+            <ProjectModal currentProject={currentProject} setCurrentProject={setCurrentProject} />
 
         </Wrapper>
     )
