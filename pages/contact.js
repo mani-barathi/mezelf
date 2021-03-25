@@ -23,9 +23,13 @@ export default function contact() {
                 <div style={{ width: "100%", marginTop: "4rem" }} >
                     <Text medium>Let's Get Social</Text>
                     <br />
-                    <Button>INSTAGRAM</Button> &nbsp;
-                    <Button>GITHUB</Button>    &nbsp;
-                    <Button>LINKEDIN</Button>  &nbsp;
+                    <FlexContainer>
+                        <Button hoverTextWhite color="facebook">FACEBOOK</Button>
+                        <Button color="instagram">INSTAGRAM</Button>
+                        <Button color="twitter">TWITTER</Button>
+                        <Button color="textGrey">GITHUB</Button>
+                        <Button hoverTextWhite color="linkedin">LINKEDIN</Button>
+                    </FlexContainer>
                 </div>
             </Container>
         </Wrapper >
@@ -45,5 +49,13 @@ const Container = styled.div`
     display:flex;
     flex-direction:column;
     justify-content:center;
+    align-items:center;
+`
+const FlexContainer = styled.div`
+    margin:0.5rem 0 0 0;
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.5rem;
+    justify-content:${props => props.flexEnd ? 'flex-end' : 'initial'};
     align-items:center;
 `

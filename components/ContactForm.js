@@ -66,9 +66,10 @@ export default function ContactForm() {
                     <FormInput value={message} onChange={(e) => setMessage(e.target.value)} as="textarea" rows="4" name="message" id="email" required autoFocus placeholder="Hey, your website is awesome!" />
                 </FormGroup>
             }
-            <Button type="button" disabled={(currentField === 0)} onClick={goToPreviousField} >PREVIOUS</Button>
+            <Button type="button" color="textGrey"
+                disabled={(currentField === 0)} onClick={goToPreviousField} >PREVIOUS</Button>
             &nbsp; &nbsp;
-            <Button textBlue>{(currentField === 2) ? 'SEND' : 'NEXT'}</Button>
+            <Button color="textBlue">{(currentField === 2) ? 'SEND' : 'NEXT'}</Button>
         </Form>
     )
 }

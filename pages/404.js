@@ -11,7 +11,7 @@ export default function Error() {
       <Text style={{ maxWidth: '600px' }}> The page you are looking for does not exist. How you got here is a mystery. But you can click the button below to go back to the homepage. </Text>
       <br />
       <Link href="/">
-        <Button textPink>HOME</Button>
+        <Button color="textPink">HOME</Button>
       </Link>
     </Wrapper>
   )

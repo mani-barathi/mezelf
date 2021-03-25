@@ -27,7 +27,7 @@ export default function Home() {
         <Text animation={fadeInAnimation} large textBlue inline>Manibarathi.</Text>
         <Paragraph isAnimated={isAnimated} >Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ducimus placeat ratione accusamus perferendis quam dolore voluptates aperiam, eaque fuga.
           <ButtonContiner>
-            <Button onClick={openModal} textBlue>ABOUT ME</Button>
+            <Button onClick={openModal} color="textBlue">ABOUT ME</Button>
           </ButtonContiner>
         </Paragraph>
       </Contianer>

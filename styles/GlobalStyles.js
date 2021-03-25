@@ -17,6 +17,10 @@ const GlobalStyle = createGlobalStyle`
         --textPink: #ff005c;
         --textBlue: #00adb5;
 
+        --facebook: #0084ff;
+        --linkedin: #0077B5;
+        --twitter: #1da1f2;
+        --instagram: rgb(235,76,76);
     }
     body{
         width:100%;

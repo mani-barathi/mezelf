@@ -41,8 +41,16 @@ export default function ProjectModal({ currentProject, setCurrentProject }) {
                 </FlexContainer>
 
                 <FlexContainer flexEnd>
-                    <Link href={currentProject.githubLink}>GITHUB</Link>
-                    <Link href={currentProject.liveLink}>WEBSITE</Link>
+                    <Link href={currentProject.githubLink}>
+                        <a target="_blank">
+                            <Button color="mediumDarkBg" hoverTextWhite small>GITHUB</Button>
+                        </a>
+                    </Link>
+                    <Link href={currentProject.liveLink}>
+                        <a target="_blank">
+                            <Button color="mediumDarkBg" hoverTextWhite small>VISIT THE WEBSITE</Button>
+                        </a>
+                    </Link>
                 </FlexContainer>
 
             </Wrapper>
@@ -65,4 +73,5 @@ const FlexContainer = styled.div`
     flex-wrap:wrap;
     gap:0.5rem;
     justify-content:${props => props.flexEnd ? 'flex-end' : 'initial'};
+    align-items:center;
 `
