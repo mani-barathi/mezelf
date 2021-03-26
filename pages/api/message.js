@@ -1,7 +1,25 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+const sgMail = require('@sendgrid/mail')
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
-export default (req, res) => {
+export default async (req, res) => {
   const { name, email, message } = JSON.parse(req.body)
-  console.log(name, email, message)
-  res.status(200).json({ report: true, message: 'Message Received!' })
+  const msg = {
+    to: process.env.RECEIVER_EMAIL,   // Change to your recipient
+    from: process.env.SENDER_EMAIL,   // Change to your verified sender
+    subject: `message from ${name}`,
+    text: `
+        name: ${name}\n
+        email: ${email}\n
+        message: ${message}
+     `
+  }
+  try {
+    await sgMail.send(msg)
+    console.log('Email sent')
+    return res.status(200).json({ report: true, message: 'Message Received!' })
+  }
+  catch (error) {
+    console.log(error)
+    return res.status(500).json({ report: false, message: 'Something went Wrong...Unable to seng Message' })
+  }
 }

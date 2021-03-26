@@ -10,6 +10,7 @@ export default function ContactForm() {
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
     const [sent, setSent] = useState(null)
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
         if (!sent) return
@@ -19,9 +20,7 @@ export default function ContactForm() {
         return () => clearTimeout(timer)
     }, [sent])
 
-    const goToPreviousField = () => {
-        setCurrentField(prev => prev - 1)
-    }
+    const goToPreviousField = () => setCurrentField(prev => prev - 1)
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -29,6 +28,7 @@ export default function ContactForm() {
         if (currentField <= 1)
             return setCurrentField(prev => prev + 1)
 
+        setLoading(true)
         const newMessage = { name, email, message }
         console.log("newMessage: ", newMessage)
         try {
@@ -52,6 +52,7 @@ export default function ContactForm() {
             console.error(error)
             setSent({ success: false })
         }
+        setLoading(false)
     }
 
     return (
@@ -83,7 +84,9 @@ export default function ContactForm() {
             <Button type="button" color="textGrey"
                 disabled={(currentField === 0)} onClick={goToPreviousField} >PREVIOUS</Button>
             &nbsp; &nbsp;
-            <Button color="textBlue">{(currentField === 2) ? 'SEND' : 'NEXT'}</Button>
+            <Button disabled={loading} color="textBlue">
+                {(currentField === 2) ? 'SEND' : 'NEXT'}
+            </Button>
         </Form>
     )
 }

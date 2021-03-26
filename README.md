@@ -6,8 +6,7 @@ Creating a Portfolio Template using NextJs🖤
 **Contributions are Welcomed💙**
 
 ### Currently Working On👇
-- [ ] Receiving message from client to server 
+- [x] ~Email the received message via sendgrid email api~
+- [x] ~Receiving message from client to server~
 - [x] ~Project Description Modal~
 - [x] ~Project Component Layout~
-- [x] ~Tech Badges in works page~
-- [x] ~Works Page Layout~
