@@ -23,20 +23,34 @@ export default function ContactForm() {
         setCurrentField(prev => prev - 1)
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
 
         if (currentField <= 1)
-            setCurrentField(prev => prev + 1)
-        else {
-            const data = { name, email, message }
-            console.log("data: ", data)
+            return setCurrentField(prev => prev + 1)
+
+        const newMessage = { name, email, message }
+        console.log("newMessage: ", newMessage)
+        try {
             // Saving Form Response Goes Here.......
+            const response = await fetch('/api/message', {
+                method: 'POST',
+                body: JSON.stringify(newMessage)
+            })
+            const data = await response.json()
+            if (!data.report)
+                return setSent({ success: false })
+
+            console.log(data)
             setName('')
             setEmail('')
             setMessage('')
             setCurrentField(0)
             setSent({ success: true })
+        }
+        catch (error) {
+            console.error(error)
+            setSent({ success: false })
         }
     }
 

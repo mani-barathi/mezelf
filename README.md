@@ -6,7 +6,8 @@ Creating a Portfolio Template using NextJs🖤
 **Contributions are Welcomed💙**
 
 ### Currently Working On👇
-- [x] Project Description Modal
+- [ ] Receiving message from client to server 
+- [x] ~Project Description Modal~
 - [x] ~Project Component Layout~
 - [x] ~Tech Badges in works page~
 - [x] ~Works Page Layout~
