@@ -47,12 +47,13 @@ export default function ContactForm() {
             setMessage('')
             setCurrentField(0)
             setSent({ success: true })
+            setLoading(false)
         }
         catch (error) {
             console.error(error)
             setSent({ success: false })
+            setLoading(false)
         }
-        setLoading(false)
     }
 
     return (
