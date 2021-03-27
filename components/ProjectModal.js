@@ -41,16 +41,13 @@ export default function ProjectModal({ currentProject, setCurrentProject }) {
                 </FlexContainer>
 
                 <FlexContainer flexEnd>
-                    <Link href={currentProject.githubLink}>
-                        <a target="_blank">
-                            <Button color="mediumDarkBg" hoverTextWhite small>GITHUB</Button>
-                        </a>
-                    </Link>
-                    <Link href={currentProject.liveLink}>
-                        <a target="_blank">
-                            <Button color="mediumDarkBg" hoverTextWhite small>VISIT THE WEBSITE</Button>
-                        </a>
-                    </Link>
+                    {currentProject.githubLink &&
+                        <Button as="a" target="_blank" href={currentProject.githubLink} color="mediumDarkBg"
+                            hoverTextWhite small>GITHUB</Button>}
+
+                    {currentProject.liveLink &&
+                        <Button as="a" target="_blank" href={currentProject.liveLink} color="mediumDarkBg"
+                            hoverTextWhite small>VISIT THE WEBSITE</Button>}
                 </FlexContainer>
 
             </Wrapper>

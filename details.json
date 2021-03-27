@@ -1,0 +1,68 @@
+{
+    "user": {
+        "name": "Manibharathi",
+        "shortDescription": "A Computer Science student from Chennai. I enjoy Coding and Exploring New Technologies. Apart from Tech, I like Speedcubing.",
+        "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    "socialLinks": {
+        "instagram": "https://www.instagram.com/",
+        "facebook": "https://www.facebook.com/",
+        "twitter": "https://www.twitter.com/",
+        "github": "https://github.com/mani-barathi",
+        "linkedin": "https://www.linkedin.com/in/mani-bharathi-08/"
+    },
+    "technologies": [
+        "HTML",
+        "CSS",
+        "javascript",
+        "react",
+        "nodejs",
+        "express",
+        "python",
+        "django",
+        "flask",
+        "firebase"
+    ],
+    "projects": [
+        {
+            "name": "Octave",
+            "description": "A Music Streaming Web App",
+            "githubLink": "https://github.com/mani-barathi/Music-Streaming-App",
+            "imageUrl": "https://cdn.sanity.io/images/j1zm8pj9/production/d16d22fec5b4541eba518b2af5c8574ac5709741-700x400.jpg?w=1000&h=1000&fit=max",
+            "liveLink": "https://music-streaming-app-4a392.web.app/",
+            "show": true,
+            "slug": "octave",
+            "technologies": [
+                "React",
+                "Material-UI",
+                "Firebase"
+            ]
+        },
+        {
+            "name": "Socialmedia",
+            "description": "A Website Inspired from Instagram, where users can share images",
+            "githubLink": "https://github.com/mani-barathi/Socialmedia",
+            "imageUrl": "https://cdn.sanity.io/images/j1zm8pj9/production/398977f6705d66d574d161370e630a6d346880bf-700x400.jpg?w=1000&h=1000&fit=max",
+            "liveLink": "http://socialmediadjango.herokuapp.com/",
+            "show": true,
+            "slug": "socialmedia",
+            "technologies": [
+                "Django",
+                "Bootstrap",
+                "Heroku"
+            ]
+        },
+        {
+            "name": "Sorting Visualizer",
+            "description": "Visualization Tool for Sorting Algorithms, implemented Quick Sort, Merge Sort, Bubble Sort",
+            "githubLink": "https://github.com/mani-barathi/Sorting-Visualizer",
+            "imageUrl": "https://cdn.sanity.io/images/j1zm8pj9/production/2c5f75ff18ab0aee7c0e225f886f349d76ca9db2-700x400.jpg",
+            "show": true,
+            "slug": "sorting-visualizer",
+            "technologies": [
+                "Python",
+                "Pygame"
+            ]
+        }
+    ]
+}

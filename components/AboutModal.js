@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import styled from "styled-components"
 import { Wrapper, Overlay } from "@/styles/Modal"
 
-export default function AboutModal({ open, setOpen }) {
+export default function AboutModal({ open, setOpen, longDescription }) {
     const wrapperRef = useRef()
     const [slideIn, setSlideIn] = useState(false)
 
@@ -30,7 +30,7 @@ export default function AboutModal({ open, setOpen }) {
                     <h1>About Me</h1>
                     <Avatar src="https://cdn0.iconfinder.com/data/icons/avatar-78/128/12-512.png" alt="" />
                 </center>
-                <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos repellat eaque nemo incidunt tempora! Beatae deleniti impedit perspiciatis assumenda quidem aliquid praesentium sed quam ullam repellat obcaecati optio sunt quaerat, quod esse perferendis, rem suscipit? Ex soluta dignissimos quas ratione.</div>
+                <div>{longDescription}</div>
             </Wrapper>
         </Overlay>
     )

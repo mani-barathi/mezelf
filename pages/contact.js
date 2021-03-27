@@ -1,8 +1,8 @@
-import { } from 'react'
 import styled from "styled-components"
 import { Text } from "@/styles/Typography"
 import { Button } from "@/styles/Button"
 import ContactForm from "@/components/ContactForm"
+import { socialLinks } from "../details.json"
 
 export default function contact() {
     return (
@@ -24,11 +24,20 @@ export default function contact() {
                     <Text medium>Let's Get Social</Text>
                     <br />
                     <FlexContainer>
-                        <Button hoverTextWhite color="facebook">FACEBOOK</Button>
-                        <Button color="instagram">INSTAGRAM</Button>
-                        <Button color="twitter">TWITTER</Button>
-                        <Button color="textGrey">GITHUB</Button>
-                        <Button hoverTextWhite color="linkedin">LINKEDIN</Button>
+                        {socialLinks.facebook &&
+                            <Button as="a" target="_blank" href={socialLinks.facebook} hoverTextWhite color="facebook">FACEBOOK</Button>}
+
+                        {socialLinks.instagram &&
+                            <Button as="a" target="_blank" href={socialLinks.instagram} color="instagram">INSTAGRAM</Button>}
+
+                        {socialLinks.twitter &&
+                            <Button as="a" target="_blank" href={socialLinks.twitter} color="twitter">TWITTER</Button>}
+
+                        {socialLinks.github &&
+                            <Button as="a" target="_blank" href={socialLinks.github} color="textGrey">GITHUB</Button>}
+
+                        {socialLinks.linkedin &&
+                            <Button as="a" target="_blank" href={socialLinks.linkedin} hoverTextWhite color="linkedin">LINKEDIN</Button>}
                     </FlexContainer>
                 </div>
             </Container>

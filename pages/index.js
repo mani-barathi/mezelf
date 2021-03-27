@@ -5,6 +5,7 @@ import AboutModal from "@/components/AboutModal"
 import { Button } from "@/styles/Button"
 import { Text, Paragraph } from "@/styles/Typography"
 import { slideDownAnimation, fadeInAnimation } from "@/styles/Animation"
+import { user } from "../details.json"
 
 export default function Home() {
   const [isAnimated, setIsAnimated] = useState(false)
@@ -24,15 +25,16 @@ export default function Home() {
       <Contianer>
         <Text animation={slideDownAnimation('-10px')} large>Hi!</Text>
         <Text animation={fadeInAnimation} large textPink inline>I'm </Text>
-        <Text animation={fadeInAnimation} large textBlue inline>Manibarathi.</Text>
-        <Paragraph isAnimated={isAnimated} >Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ducimus placeat ratione accusamus perferendis quam dolore voluptates aperiam, eaque fuga.
+        <Text animation={fadeInAnimation} large textBlue inline>{user.name}.</Text>
+        <Paragraph isAnimated={isAnimated} >
+          {user.shortDescription}
           <ButtonContiner>
             <Button onClick={openModal} color="textBlue">ABOUT ME</Button>
           </ButtonContiner>
         </Paragraph>
       </Contianer>
 
-      <AboutModal open={open} setOpen={setOpen} />
+      <AboutModal open={open} setOpen={setOpen} longDescription={user.longDescription} />
     </Wrapper>
   )
 }
