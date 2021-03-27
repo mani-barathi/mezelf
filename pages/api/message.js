@@ -6,10 +6,6 @@ export default async (req, res) => {
   if (req.method !== 'POST')
     return res.status(403).json({ report: false, message: '403 Forbidden.' })
 
-  console.log(process.env.SENDGRID_API_KEY)
-  console.log(process.env.RECEIVER_EMAIL)
-  console.log(process.env.SENDER_EMAIL)
-
   const { name, email, message } = JSON.parse(req.body)
   const msg = {
     to: process.env.RECEIVER_EMAIL,   // Change to your recipient

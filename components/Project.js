@@ -13,7 +13,8 @@ export default function Project({ data, setCurrentProject }) {
                 </div>
             </Cover>
             <Title>{data.name}</Title>
-            <Image src={`https://via.placeholder.com/500x280.png`} />
+            <Image src={data.imageUrl} />
+            {/* <Image src={`https://via.placeholder.com/700x400.png`} /> */}
         </Container>
     )
 }
@@ -29,6 +30,7 @@ const Cover = styled.div`
     justify-content:center;
     align-items:center;
     background-color:rgba(0,0,0,0.4);
+    border-radius:3px;
     & > div{
         max-width:75%;
         display:flex;
@@ -44,6 +46,7 @@ const Container = styled.div`
     transition: all 0.2s ease;
     animation: ease-in 0.3s ${fadeInAnimation};
     box-shadow: 2px 5px 10px 5px  rgba(80,80,80, 0.2);
+    border-radius:3px;
     cursor:pointer;
     position:relative;
     &:hover ${Cover}{
@@ -56,13 +59,15 @@ const Image = styled.img`
     object-fit:cover;
 `
 const Title = styled.small`
-    background-color:var(--lightBg);
+    color: var(--textGrey);
+    background-color:var(--darkBg);
+    border-top-left-radius:3px;
+    border-top-right-radius:3px;
     display:block;
     padding:0.1rem 0;
     text-align:center;
     font-weight:600;
     text-transform: uppercase;
     letter-spacing:1px;
-    color: var(--darkBg);
     user-select:none;
 `
